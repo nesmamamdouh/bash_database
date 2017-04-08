@@ -1,0 +1,5 @@
+echo Enter Database Name:
+read databasename
+echo Enter Table Name:
+read tablename
+cat $databasename/$tablename

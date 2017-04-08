@@ -1,0 +1,8 @@
+echo "Enter Database Name:"
+read databasename
+echo "Enter Table Name: "
+read tablename
+echo "Enter Row_ID"
+read id
+grep -v "$id:" $databasename/$tablename  > $databasename/temp &&  mv $databasename/temp $databasename/$tablename
+

@@ -1,0 +1,11 @@
+PS3="Enter your choice :"
+select choice in "Create Database" "Use Database" "Drop Database" "Exit";
+do
+case $REPLY in
+    1) . ./createdatabase;;
+    2) . ./tables;;
+    3) . ./dropdatabase;;
+    4) break;;
+    *) echo "Wrong choice!";;
+esac
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+PS3="Enter your choice :"
+select choice in "Create Table" "Drop Table" "List Table Data" "Insert Row" "Delete Row" "Update Table"  "Exit";
+do
+case $REPLY in
+    1) . ./createtable;;
+    2) . ./droptable;;
+    3) . ./display;;
+    4) . ./insertrow;;
+    5) echo "$choice";;
+    6) echo "$choice";;   
+    7) break;;
+    *) echo "Wrong choice!";;
+esac
+done

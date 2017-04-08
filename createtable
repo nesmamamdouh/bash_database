@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Enter Database Name: "
+read databasename
+echo "Enter Table Name: "
+read tablename
+echo "Enter No. of columns: "
+read nocol
+if echo $nocol | egrep -q '^[0-9]+$'; then
+touch $databasename/$tablename
+touch $databasename/$tablename.meta
+for (( i=1; i <= $nocol; ++i ))
+do
+    echo "Enter Column Name: "
+    read col
+    echo  $col >> $databasename/"$tablename.meta"	
+done
+echo $tablename table was created
+else
+echo "Invalid Number"
+fi

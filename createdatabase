@@ -1,0 +1,8 @@
+echo "Enter Database Name: "
+read name
+if [ -f "$name" ];
+then
+echo "file exists"
+else
+mkdir $name  
+fi

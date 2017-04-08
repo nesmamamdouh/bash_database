@@ -1,0 +1,3 @@
+echo Enter Database Name:
+read databasename
+rm -r /Users/nesmaabdelmageed/ITI/Shell\ Course/Project/$databasename

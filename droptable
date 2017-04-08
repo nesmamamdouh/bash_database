@@ -1,0 +1,7 @@
+echo "Enter Database Name: "
+read databasename
+echo "Enter Table Name: "
+read tablename
+rm $databasename/$tablename
+rm $databasename/$tablename.meta
+echo $tablename table was dropped

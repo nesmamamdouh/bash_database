@@ -1,0 +1,16 @@
+echo "Enter Database Name:"
+read databasename
+echo "Enter Table Name:"
+read tablename
+x=0 
+column=$(awk -F':' 'END {print NR; exit}' $databasename/$tablename.meta)
+printf "\n" >> $databasename/$tablename
+for x in `seq 1  $column`
+ do
+           columnname=$(sed -n "${x}p" $databasename/$tablename.meta)
+           echo "Enter $columnname :"
+           read input
+           echo -n " $input:" >> $databasename/$tablename
+           ((x=x+1))
+  done
+            echo "record is inserted"
